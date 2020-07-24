@@ -9,7 +9,7 @@ export class main_area extends Component {
         return (
             <div className={styles.mainArea} style={{ backgroundImage: `url(${previewCar})` }}>
 
-                <button>Exteriér</button>
+                <button>Exterier</button>
                 <button>Interiér</button>
             </div>
         )
