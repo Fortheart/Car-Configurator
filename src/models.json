@@ -1,0 +1,58 @@
+{
+    "models": [
+        {
+            "id": 1,
+            "modelReducerId": "ID_MODEL_ONE",
+            "name": "SE",
+            "seats": "Standard seats",
+            "seatsMaterial": "Vinyl seats",
+            "wheels": "16 inch wheels",
+            "lights": "LED headlights",
+            "airCondition": "Manual air condtition",
+            "parkingAssistant": "Parking Assistant",
+            "price": 0
+        },
+        {
+            "id": 2,
+            "modelReducerId": "ID_MODEL_TWO",
+            "name": "MODEL SPORT LINE",
+            "seats": "Sports seats",
+            "seatsMaterial": "Leather seats",
+            "wheels": "17 inch wheels",
+            "lights": "FULL LED",
+            "airCondition": "Automatic air condition",
+            "BMWIndividual": "BMW Individual",
+            "parkingAssistant": "Parking Assistant",
+            "package": "Sports Package",
+            "price": 4485
+        },
+        {
+            "id": 3,
+            "modelReducerId": "ID_MODEL_THREE",
+            "name": "MODEL LUXURY LINE",
+            "seats": "Luxury seats",
+            "seatsMaterial": "Vernasca Leather seats",
+            "wheels": "17 inch wheels",
+            "lights": "FULL LED",
+            "airCondition": "Automatic air condition",
+            "BMWIndividual": "BMW Individual",
+            "parkingAssistant": "Parking Assistant",
+            "package": "Luxury Package",
+            "price": 6727
+        },
+        {
+            "id": 4,
+            "modelReducerId": "ID_MODEL_FOUR",
+            "name": "MODEL M SPORT",
+            "seats": "Sports seats",
+            "seatsMaterial": "Alcantara/Leather seats",
+            "wheels": "18 inch wheels",
+            "lights": "FULL LED",
+            "airCondition": "Automatic air condtion",
+            "BMWIndividual": "BMW Individual",
+            "parkingAssistant": "Parking Assistant",
+            "package": "M Sport Package",
+            "price": 9000
+        }
+    ]
+}

@@ -1,20 +1,36 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import styles from '../styles/app.module.css';
+import styles from '../styles/footer.module.css';
 
-class footer extends Component {
-    continue = e => {
-        e.preventDefault();
-        this.props.nextStep();
+import { connect } from 'react-redux';
+import priceReducer from '../reducers/priceReducer';
+const footer = (props) => {
+    console.log(props)
+
+    const handleClick = () => {
+        props.nextPage()
     }
-    render() {
-        return (
-            <footer>
-                <div className={styles.bottomBar}><p>Cena: 1 350 000 Kč</p></div>
-                <button onClick={this.continue}>DALŠÍ KROK</button>
-            </footer>
-        )
+
+    //const dispatch = this.props.dispatch;
+    return (
+
+        < footer >
+            <div className={styles.bottomBar}><p>Price: ${props.price}</p></div>
+            <button onClick={handleClick}>NEXT STEP</button>
+        </footer >
+    )
+
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        nextPage: () => { dispatch({ type: 'INCREMENT' }) }
     }
 }
 
-export default footer
+const mapStateToProps = (state) => {
+    return {
+        price: state.enginePriceReducer.price + state.modelPriceReducer.price + state.extColorReducer.price + state.wheelsReducer.price + state.interiorColorReducer.price + state.trimColorReducer.price
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(footer)
