@@ -1,0 +1,36 @@
+{
+    "colors": [
+        {
+            "id": 0,
+            "type": "Alpine White",
+            "name": "white",
+            "reducerId": "WHITE_EXT_COLOR",
+            "colorImg": "https://i.ibb.co/8btVHT2/white.png",
+            "price": 0
+        },
+        {
+            "id": 1,
+            "type": "Jet Black",
+            "name": "black",
+            "reducerId": "BLACK_EXT_COLOR",
+            "colorImg": "https://i.ibb.co/DGVHJb3/black.png",
+            "price": 0
+        },
+        {
+            "id": 2,
+            "type": "Sunset Orange metallic",
+            "name": "orange",
+            "reducerId": "ORANGE_EXT_COLOR",
+            "colorImg": "https://i.ibb.co/VwpNtks/orange.png",
+            "price": 670
+        },
+        {
+            "id": 3,
+            "type": "Portimao Blue metallic",
+            "name": "blue",
+            "reducerId": "BLUE_EXT_COLOR",
+            "colorImg": "https://i.ibb.co/mqzTBZ5/blue.png",
+            "price": 670
+        }
+    ]
+}
