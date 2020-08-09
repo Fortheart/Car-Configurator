@@ -1,11 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styles from '../styles/app.module.css'
-
-import lightLeather from '../img/interior/lightLeather.jpeg';
-import blackLeather from '../img/interior/blackLeather.jpeg';
-import silverTrim from '../img/interior/silverTrim.jpeg';
-import blackTrim from '../img/interior/blackTrim.jpeg';
+import styles from '../styles/sidebar.module.css'
 
 import dotActive from '../img/dot-active.png';
 import dot from '../img/dot.png';
@@ -77,7 +72,7 @@ class sidebarThirdStep extends React.Component {
                 </div>
 
                 {/*TRIM*/}
-                <h2 style={{ margin: `10.8rem 0 0 3.4rem` }}>Trim</h2>
+                <h2 className={styles.textSpacer}>Trim</h2>
                 <div className={styles.physicalSpecs}>
                     <div>
                         {this.state.trimColor.colors && this.state.trimColor.colors.map(color => {
@@ -116,7 +111,6 @@ class sidebarThirdStep extends React.Component {
                     <img src={dot} alt='.' />
                     <img src={dot} alt='.' />
                     <img src={dotActive} alt='.' />
-                    <img src={dot} alt='.' />
                 </div>
 
             </div>

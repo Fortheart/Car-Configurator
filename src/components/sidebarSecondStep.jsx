@@ -4,13 +4,6 @@ import styles from '../styles/sidebar.module.css'
 
 import dotActive from '../img/dot-active.png';
 import dot from '../img/dot.png';
-import white from '../img/colors/white.png';
-import blue from '../img/colors/blue.png';
-import orange from '../img/colors/orange.png';
-import black from '../img/colors/black.png';
-
-import standardWheels from '../img/wheels/standardWheels.png';
-import premiumWheels from '../img/wheels/premiumWheels.png';
 
 import wheelsList from '../wheelsList.json';
 import colorList from '../colorsList.json';
@@ -31,6 +24,7 @@ class sidebarSecondStep extends React.Component {
 
 
         }
+
     }
 
     componentDidMount() {
@@ -43,19 +37,18 @@ class sidebarSecondStep extends React.Component {
     handleClick = (colorPicker, id, price, name, type) => {
         this.props.setColor(colorPicker, price, name, type)
         this.setState({ colorSelected: id })
-        console.log(colorPicker, price);
     }
 
     wheelsHandleClick = (wheelsPicker, id, price, name, type) => {
         this.props.setWheels(wheelsPicker, price, name, type)
         this.setState({ wheelsSelected: id })
-        console.log(wheelsPicker);
     }
+
+
 
     render() {
         return (
             <div className={styles.sidebar}>
-
                 <h2>Paint</h2>
 
                 <div className={styles.physicalSpecs}>
@@ -78,7 +71,7 @@ class sidebarSecondStep extends React.Component {
                     </div>
                 </div>
 
-                <h2 style={{ margin: `10.8rem 0 0 3.4rem` }}>Wheels</h2>
+                <h2 className={styles.textSpacer}>Wheels</h2>
                 <div className={styles.physicalSpecs}>
                     <div>
 
@@ -116,7 +109,6 @@ class sidebarSecondStep extends React.Component {
                     <img src={dot} alt='.' />
                     <img src={dotActive} alt='.' />
                     <img src={dot} alt='.' />
-                    <img src={dot} alt='.' />
                 </div>
             </div>
         )
@@ -134,7 +126,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         setColor: (colorPicker, price, name, type) => { dispatch({ type: colorPicker, payload: price, color: name, officialName: type }) },
-        setWheels: (wheelsPicker, price, name, type) => { dispatch({ type: wheelsPicker, payload: price, name: name, officialName: type }) }
+        setWheels: (wheelsPicker, price, name, type) => { dispatch({ type: wheelsPicker, payload: price, name: name, officialName: type }) },
+        nextPage: () => { dispatch({ type: 'DECREMENT' }) }
     }
 }
 

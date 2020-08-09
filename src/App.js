@@ -6,6 +6,7 @@ import SidebarFirstStep from './components/sidebar_first_step';
 import SidebarSecondStep from './components/sidebarSecondStep';
 import SidebarThirdStep from './components/sidebarThirdStep';
 import SidebarFourthStep from './components/sidebarFourthStep';
+import SidebarFifthStep from './components/sidebarFifthStep';
 import MainArea from './components/main_area';
 import Footer from './components/footer';
 
@@ -63,6 +64,10 @@ const App = () => {
           <Footer
           />
         </div>
+      )
+    case 5:
+      return (
+        <SidebarFifthStep />
       )
     default: return <h1>NO STATE</h1>
   }

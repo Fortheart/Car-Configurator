@@ -7,7 +7,11 @@ box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 height: 86vh;
 overflow-y: scroll;
 }
-
+.arrowBack{
+    width: 6%;
+    margin-top: 2.4rem;
+    margin-left: 3.4rem;
+}
 
 .sidebar h2{
     font-size: 3.6rem;
@@ -37,16 +41,51 @@ overflow-y: scroll;
     
 }
 
-.physicalSpecs{
+
+.engineSpecs{
     width: 90%;
+    
     margin-left: 5%;
     font-size: 1.6rem;
     display: grid;
     grid-template-columns: 1fr 1.3fr 1fr 1fr;
+    height: 11rem;
+    
+}
+.engineSpecs > div{
+    display: flex;
+    
+   
+    
+}
+.engineSpecs > div > div{
+    background-repeat: no-repeat;
+    height: 7.6rem;
+    width: 9rem;
+    margin: 0 1.2rem;
+    
+}
+
+.engineSpecs p {
+    font-size: 1.3rem;
+}
+
+.physicalSpecs{
+    width: 100%;
+    
+    margin-left: 5%;
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+    overflow-y: none;
+    height: 11rem;
     
 }
 .physicalSpecs > div{
     display: flex;
+    
+   
     
 }
 .physicalSpecs > div > div{
@@ -54,6 +93,7 @@ overflow-y: scroll;
     height: 7.6rem;
     width: 9rem;
     margin: 0 1.2rem;
+    
 }
 .colorSelectedBackground{
     box-shadow: 0 4px 10px;
@@ -80,13 +120,24 @@ box-shadow: 0 4px 10px;
 box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 }
 
+.textSpacer{
+    padding-top: 5rem;
+    padding-bottom: .5rem;
+}
 
 .comfortSpecs{
     width: 90%;
     margin-left: 5%;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.spacer{
+    margin-bottom: 20vh;
+}
+.bluePlus{
+    color: #1C69D4;
 }
 
 .dots{
@@ -106,7 +157,8 @@ box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 -webkit-box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 -moz-box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
-    height: 95%;
+    margin-top: 4%;
+    height: 80%;
     width: 95%;
     position: absolute;
     top: 2.5%;
@@ -117,19 +169,20 @@ box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 .menuContainer > img{
     float: right;
     margin: 2.9rem 2.9rem 0 0;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 2.9rem;
 }
 .menuContainer h1{
     font-weight: 300;
     font-size: 3.6rem;
     margin-top: 5.6rem;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 .menuContainerRow{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    margin-bottom: 5%;
-    margin-left: 10%;
+    justify-items: center;
 }
 .menuContainerRow >div{
     background: white;
@@ -137,14 +190,10 @@ box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 -webkit-box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 -moz-box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
-width: 60.2rem;
-height: 28.8rem;
+width: 85%;
+min-height: 28.8rem;
 margin-top: 5rem;
 
-}
-.menuContainerRow >div:nth-child(odd){
-    margin-left: 2rem;
-    margin-right: 10%;
 }
 
 .menuContainerHeadline{
@@ -213,10 +262,68 @@ margin-top: 5rem;
             height: auto;
         overflow-y: none;
         }
+        .spacer{
+            margin-bottom: 10vh;
+        }
+
+
+        .menuContainer{
+            background: white;
+            box-shadow: 0 4px 10px;
+        -webkit-box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+            height: 95%;
+            width: 95%;
+            position: absolute;
+            top: 2.5%;
+            left: 2.5%;
+            overflow-y: scroll;
+            
+        }
+        .menuContainer > img{
+            float: right;
+            margin: 2.9rem 2.9rem 0 0;
+        }
+        .menuContainer h1{
+            font-weight: 300;
+            font-size: 3.6rem;
+            margin-top: 5.6rem;
+            margin-left: 10%;
+        }
+        .menuContainerRow{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            margin-bottom: 5%;
+            margin-left: 0%;
+            
+        }
+
+        .menuContainerRow >div:nth-child(odd){
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
     }
 
     @media only screen and (max-width: 480px) {
-        .sidebar > div > p{
-            font-size: 1.3rem;
+        .menuContainerSpecs{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            margin-left: 5%;
+            margin-top: 3.3rem;
         }
+        .menuContainerSpecs p{
+            font-size: 1.4rem;
+            
+        }
+        .menuContainerRow >div{
+        height: 40rem;
+        width: 80%;
+        margin-top: 5rem;
+        
+        }
+    
     }

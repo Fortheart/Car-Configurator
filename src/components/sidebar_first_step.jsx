@@ -8,7 +8,6 @@ import closeIcon from '../img/close_icon.png';
 
 import engineList from '../engineList.json';
 import modelsList from '../models.json';
-import carIdReducer from '../reducers/carIdReducer';
 
 class sidebar_first_step extends Component {
 
@@ -66,12 +65,6 @@ class sidebar_first_step extends Component {
 
 
     render() {
-        /* const newPrice = () => {
-              this.props.setPrice();
-              console.log(this.state.price)
-          }
-          const ffs = 55555000;
-          newPrice(ffs);*/
 
         const handlePrice = (price, name, id) => {
             this.props.setBasePrice(price, name);
@@ -82,21 +75,6 @@ class sidebar_first_step extends Component {
             this.props.setModelPrice(price, name);
             this.setState({ modelSelected: id })
         }
-        const handleNewPrice = (price, id) => {
-            this.props.newPrice(price);
-            this.setState({ modelSelected: id })
-        }
-
-        const handleModelSelected = () => {
-            if (this.state.modelWasSelected === true) {
-                this.setState({ modelWasSelected: false })
-            }
-            else if (this.state.modelWasSelected === false) {
-                this.setState({ modelWasSelected: true })
-            }
-        }
-
-
 
         const handleClick = (carId) => {
             this.props.setCarType(carId);
@@ -108,18 +86,13 @@ class sidebar_first_step extends Component {
         }
         return (
 
-
-
-
-
             <div className={styles.sidebar}>
-
                 {this.state.specs.engines && this.state.specs.engines.filter(spec => spec.id === this.props.carId).map(filteredSpec => {
                     return (
                         <span>
                             <h2>Engines</h2>
                             <h4>{filteredSpec.name}</h4>
-                            <div className={styles.physicalSpecs}>
+                            <div className={styles.engineSpecs}>
                                 <p>Palivo:</p>
                                 <p>{filteredSpec.fuel}</p>
                                 <p>Výkon:</p>
@@ -170,7 +143,6 @@ class sidebar_first_step extends Component {
                     <img src={dotActive} alt='.' />
                     <img src={dot} alt='.' />
                     <img src={dot} alt='.' />
-                    <img src={dot} alt='.' />
                 </div>
                 {
                     this.state.menuActive === false ?
@@ -184,7 +156,7 @@ class sidebar_first_step extends Component {
                                 {this.state.specs.engines.filter(spec => spec.fuel === "gas").map(filteredSpec => {
                                     if (filteredSpec.id === this.state.engineSelected) {
                                         return (
-                                            <div key={filteredSpec.id} onClick={() => { handleClick(filteredSpec.reducerId); handlePrice(filteredSpec.price, filteredSpec.name, filteredSpec.id); }} className={styles.engineSelected}>
+                                            <div key={filteredSpec.id} onClick={() => { handleClick(filteredSpec.reducerId); handlePrice(filteredSpec.price, filteredSpec.name, filteredSpec.id); this.openMenuContainer(); }} className={styles.engineSelected}>
                                                 <div className={styles.menuContainerHeadline}>
 
                                                     <p>{filteredSpec.name}</p>
@@ -210,7 +182,7 @@ class sidebar_first_step extends Component {
                                     }
                                     else {
                                         return (
-                                            <div key={filteredSpec.id} onClick={() => { handleClick(filteredSpec.reducerId); handlePrice(filteredSpec.price, filteredSpec.name, filteredSpec.id); }}>
+                                            <div key={filteredSpec.id} onClick={() => { handleClick(filteredSpec.reducerId); handlePrice(filteredSpec.price, filteredSpec.name, filteredSpec.id); this.openMenuContainer(); }}>
                                                 <div className={styles.menuContainerHeadline}>
 
                                                     <p>{filteredSpec.name}</p>
@@ -245,7 +217,7 @@ class sidebar_first_step extends Component {
 
                                     if (filteredSpec.id === this.state.engineSelected) {
                                         return (
-                                            <div key={filteredSpec.id} onClick={() => { handleClick(filteredSpec.reducerId); handlePrice(filteredSpec.price, filteredSpec.name, filteredSpec.id); }} className={styles.engineSelected}>
+                                            <div key={filteredSpec.id} onClick={() => { handleClick(filteredSpec.reducerId); handlePrice(filteredSpec.price, filteredSpec.name, filteredSpec.id); this.openMenuContainer(); }} className={styles.engineSelected}>
                                                 <div className={styles.menuContainerHeadline}>
 
                                                     <p>{filteredSpec.name}</p>
@@ -271,7 +243,7 @@ class sidebar_first_step extends Component {
                                     }
                                     else {
                                         return (
-                                            <div key={filteredSpec.id} onClick={() => { handleClick(filteredSpec.reducerId); handlePrice(filteredSpec.price, filteredSpec.name, filteredSpec.id); }}>
+                                            <div key={filteredSpec.id} onClick={() => { handleClick(filteredSpec.reducerId); handlePrice(filteredSpec.price, filteredSpec.name, filteredSpec.id); this.openMenuContainer(); }}>
                                                 <div className={styles.menuContainerHeadline}>
 
                                                     <p>{filteredSpec.name}</p>
@@ -339,7 +311,7 @@ class sidebar_first_step extends Component {
                                     }
                                     else {
                                         return (
-                                            <div key={spec.id} onClick={() => { handleModelClick(spec.modelReducerId); handleModelPrice(spec.price, spec.name, spec.id); }}>
+                                            <div key={spec.id} onClick={() => { handleModelClick(spec.modelReducerId); handleModelPrice(spec.price, spec.name, spec.id); this.openMenuTrimContainer() }}>
 
                                                 <div className={styles.menuContainerHeadline}>
                                                     <p>{spec.name}</p>

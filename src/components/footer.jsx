@@ -16,7 +16,11 @@ const footer = (props) => {
 
         < footer >
             <div className={styles.bottomBar}><p>Price: ${props.price}</p></div>
-            <button onClick={handleClick}>NEXT STEP</button>
+            {props.steps < 4 ?
+                <button onClick={handleClick}>NEXT STEP</button>
+                :
+                <button onClick={handleClick}>BUY BMW</button>
+            }
         </footer >
     )
 
@@ -29,7 +33,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
     return {
-        price: state.enginePriceReducer.price + state.modelPriceReducer.price + state.extColorReducer.price + state.wheelsReducer.price + state.interiorColorReducer.price + state.trimColorReducer.price
+        price: state.enginePriceReducer.price + state.modelPriceReducer.price + state.extColorReducer.price + state.wheelsReducer.price + state.interiorColorReducer.price + state.trimColorReducer.price,
+        steps: state.stepCounterReducer
     }
 }
 
