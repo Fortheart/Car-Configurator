@@ -1,0 +1,18 @@
+{
+    "colors": [
+        {
+            "id": 0,
+            "type": "Black With Contrast Leather Stitching Vernasca Leather",
+            "reducerId": "BLACK_INTERIOR",
+            "url": "https://i.ibb.co/NSQkh6c/black-Leather.jpg",
+            "price": 0
+        },
+        {
+            "id": 1,
+            "type": "Oyster With Contrast Leather Stitching Vernasca Leather",
+            "reducerId": "LIGHT_INTERIOR",
+            "url": "https://i.ibb.co/Yhp6JxM/light-Leather.jpg",
+            "price": 300
+        }
+    ]
+}
