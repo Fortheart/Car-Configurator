@@ -56,9 +56,8 @@ export class main_area extends Component {
         else if (this.props.extColor === 'blue' && this.props.wheels === 'premiumWheels') {
             return bmw3_blue_premium_wheels;
         }
-        //INTERIOR
-
     }
+
     changeInteriorConfig = () => {
         if (this.props.interiorColor === 0 && this.props.trimColor === 0) {
             return blackSilverInterior;

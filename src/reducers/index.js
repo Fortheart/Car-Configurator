@@ -6,7 +6,6 @@ import interiorColorReducer from './interiorColorReducer';
 import trimColorReducer from './trimColorReducer';
 import carIdReducer from './carIdReducer';
 import carModelReducer from './carModelReducer';
-import priceReducer from './priceReducer';
 import enginePriceReducer from './enginePriceReducer';
 import modelPriceReducer from './modelPriceReducer';
 import { combineReducers } from 'redux';

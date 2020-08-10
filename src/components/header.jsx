@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import styles from '../styles/app.module.css';
 import engineList from '../engineList.json';
 import { connect } from 'react-redux';
-import carIdReducer from '../reducers/carIdReducer';
 
 class header extends Component {
 

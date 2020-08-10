@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '../styles/footer.module.css';
 
 import { connect } from 'react-redux';
-import priceReducer from '../reducers/priceReducer';
+
 const footer = (props) => {
     console.log(props)
 
