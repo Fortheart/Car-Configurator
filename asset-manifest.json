@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6f3dc0bf.chunk.css",
+    "main.js": "/static/js/main.2d85006a.chunk.js",
+    "main.js.map": "/static/js/main.2d85006a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1d2d4193.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1d2d4193.js.map",
+    "static/js/2.c8a631bd.chunk.js": "/static/js/2.c8a631bd.chunk.js",
+    "static/js/2.c8a631bd.chunk.js.map": "/static/js/2.c8a631bd.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f6edb7c15691bedbefba64f0c96ae463.js": "/precache-manifest.f6edb7c15691bedbefba64f0c96ae463.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6f3dc0bf.chunk.css.map": "/static/css/main.6f3dc0bf.chunk.css.map",
+    "static/js/2.c8a631bd.chunk.js.LICENSE.txt": "/static/js/2.c8a631bd.chunk.js.LICENSE.txt",
+    "static/media/blackBlackInterior.png": "/static/media/blackBlackInterior.46c90052.png",
+    "static/media/blackSilverInterior.png": "/static/media/blackSilverInterior.9d717c72.png",
+    "static/media/bmw3_black.png": "/static/media/bmw3_black.6202eff8.png",
+    "static/media/bmw3_black_premium_wheels.png": "/static/media/bmw3_black_premium_wheels.e0678124.png",
+    "static/media/bmw3_blue.png": "/static/media/bmw3_blue.e1a6987c.png",
+    "static/media/bmw3_blue_premium_wheels.png": "/static/media/bmw3_blue_premium_wheels.5b3208d4.png",
+    "static/media/bmw3_orange.png": "/static/media/bmw3_orange.01c8b2fc.png",
+    "static/media/bmw3_orange_premium_wheels.png": "/static/media/bmw3_orange_premium_wheels.d35d793b.png",
+    "static/media/bmw3_white.png": "/static/media/bmw3_white.d938175b.png",
+    "static/media/bmw3_white_premium_wheels.png": "/static/media/bmw3_white_premium_wheels.01128480.png",
+    "static/media/lightBlackInterior.png": "/static/media/lightBlackInterior.0e07e544.png",
+    "static/media/lightSilverInterior.png": "/static/media/lightSilverInterior.82e1e154.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1d2d4193.js",
+    "static/js/2.c8a631bd.chunk.js",
+    "static/css/main.6f3dc0bf.chunk.css",
+    "static/js/main.2d85006a.chunk.js"
+  ]
+}
