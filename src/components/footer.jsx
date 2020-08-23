@@ -3,7 +3,6 @@ import React from 'react'
 import styles from '../styles/footer.module.css';
 
 import { connect } from 'react-redux';
-
 const footer = (props) => {
     console.log(props)
 

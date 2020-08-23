@@ -1,5 +1,8 @@
+
 footer{
     display: flex;
+    position: sticky; 
+     bottom: 0;
 }
 .bottomBar{
     width: 70%;
@@ -31,6 +34,10 @@ footer > button{
     font-weight: 500;
 }
 
+@media (min-width: 2000px) {
+
+    }
+    
 @media only screen and (max-width: 480px) {
     footer{
         display: block;
@@ -47,3 +54,4 @@ footer > button{
         width: 100%;
     }
 }
+

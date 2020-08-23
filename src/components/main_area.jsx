@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import styles from '../styles/mainArea.module.css';
 
@@ -78,18 +79,35 @@ export class main_area extends Component {
     render() {
         if (this.props.showInterior === false) {
             return (
-                <div className={styles.mainArea} style={{ backgroundImage: `url(${this.changeConfig()})` }}>
+                <div className={styles.mainArea}>
+                    <LazyLoadImage
+                        className={styles.mainAreaImg}
+                        width="100%"
+                        alt={"BMW"}
+                        effect="blur"
+                        src={this.changeConfig()} // use normal <img> attributes as props
+                    />
                     <div>
                         <button onClick={this.switchToExterior} className={styles.activeButton}>Exterior</button>
                         <button onClick={this.switchToInterior}>Interior</button>
 
+
+
                     </div>
+
                 </div>
             )
         }
         else if (this.props.showInterior === true) {
             return (
-                <div className={styles.mainArea} style={{ backgroundImage: `url(${this.changeInteriorConfig()})` }}>
+                <div className={styles.mainArea}>
+                    <LazyLoadImage
+                        className={styles.mainAreaImg}
+                        width="100%"
+                        alt={"BMW"}
+                        effect="blur"
+                        src={this.changeInteriorConfig()} // use normal <img> attributes as props
+                    />
                     <div>
                         <button onClick={this.switchToExterior}>Exterior</button>
                         <button onClick={this.switchToInterior} className={styles.activeButton}>Interior</button>

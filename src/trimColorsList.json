@@ -1,14 +1,14 @@
 {
     "colors": [
         {
-            "id": 0,
+            "id": 1,
             "type": "Aluminium Tetragon",
             "reducerId": "SILVER_TRIM",
             "url": "https://i.ibb.co/c8sx86H/silver-Trim.jpg",
             "price": 0
         },
         {
-            "id": 1,
+            "id": 0,
             "type": "Piano Black",
             "reducerId": "BLACK_TRIM",
             "url": "https://i.ibb.co/L9KW4d1/black-Trim.jpg",
